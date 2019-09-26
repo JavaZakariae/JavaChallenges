@@ -23,7 +23,7 @@ public class Challenge_2 {
 
         //default String attack(){return jump(jedi-> String.join(jedi, useSaber(), useForce())); }
         default String attack(){
-            return jump(stringInput-> String.join(stringInput, useSaber(), this.useForce()));
+            return jump(stringInput-> String.join(stringInput, useSaber(), useForce()));
         }
 
         private String jump( Function<String, String> function){
