@@ -1,42 +1,38 @@
-import java.io.Closeable;
-import java.io.IOException;
+import java.util.List;
 
 /**
- *  str.matches(regExp) return tru if str matches the given regular expressions.
+ *  The stream could be used only one time; used means applying terminal operation on the stream.
  *
- *  RuntimeException extends Exception extends Throwable.
- *  StackOverflowError extends Error extends Throwable.
  *
- *  in a try with resources block, when an exception is thrown, the resource is closed before any catch block.
- *
+ *  void forEachOrdered(Consumer<? super T> action);
+ *  perform the action on the stream preserving the order of the stream components.
+ *  even if we use parallel to parallelize the operations.
  */
-public class Challenge_10  {
+public class Challenge_10 {
+
     public static void main( String[] args ) {
-        String soprano = null;
-        CloseIt closeIt = new CloseIt();
-        try (closeIt){
-            System.out.println(soprano.matches(null));
-        }catch (RuntimeException re){
-            try (closeIt){
-                System.out.println("runtime");
-                throw new StackOverflowError();
-            }
-            catch(Exception e){
-                System.out.println("exception");
-            }
-        }
-        catch (Error error){
-            System.out.println("error");
-        }
-        catch (Throwable throwable){
-            System.out.println("throwable");
-        }
+
+        final List<Simpson> simpsons = List.of(new Simpson(10), new Simpson(15),
+                new Simpson(11), new Simpson(20),
+                new Simpson(22));
+
+        simpsons.stream().parallel().filter(s->s.age>10)
+                .map(simpson -> simpson+",")
+                .forEachOrdered(System.out::println);
+
+        System.out.println();
+
+        simpsons.stream().parallel().filter(s->s.age>10)
+                .map(simpson -> simpson+",")
+                .forEach(System.out::println);
+
+
     }
 
-    private static class CloseIt implements Closeable {
+    private static class Simpson {
+        int age;
+        public Simpson( int age ) {this.age = age;}
         @Override
-        public void close() throws IOException {
-            System.out.println("close");
-        }
+        public String toString() {return ""+this.age;}
     }
 }
