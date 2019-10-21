@@ -1,3 +1,5 @@
+package challenge01_20;
+
 import java.util.stream.IntStream;
 
 /**

@@ -1,3 +1,5 @@
+package challenge01_20;
+
 /**
  *
  *  Object initialisation is run for every object creation

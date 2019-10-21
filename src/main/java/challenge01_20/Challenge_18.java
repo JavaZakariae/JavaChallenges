@@ -1,3 +1,5 @@
+package challenge01_20;
+
 /**
  *  bitwise operation
  *  || before && unless parentheses are used
