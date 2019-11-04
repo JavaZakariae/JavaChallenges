@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  *  . any character
  *
  */
-public class challenge_25 {
+public class Challenge_25 {
     public static void main( String[] args ) {
         testRegex("lisa@gmail.com");
         testRegex("misterburns$gmail9net.com");
