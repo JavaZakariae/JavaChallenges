@@ -27,7 +27,11 @@ public class Challenge_61 {
         mainMap.put(subMap3, "crazyMap3");
 
         System.out.println(mainMap.size());
-        System.out.println("mainMap.entrySet().size() = " + mainMap.entrySet().size());
+
+
+        System.out.println("mainMap.get(subMap1) = " + mainMap.get(subMap1));
+        System.out.println("mainMap.get(subMap3) = " + mainMap.get(subMap3));
+
 
     }
 }
