@@ -4,6 +4,6 @@ The source code contains the java challenges found on the following [youtube cha
 
 # Stackoverfow questions:
 - [What's the difference between map() and flatMap() methods in Java 8?](https://stackoverflow.com/questions/26684562/whats-the-difference-between-map-and-flatmap-methods-in-java-8)
-
+- [Stream and the distinct operation](https://stackoverflow.com/questions/21333646/stream-and-the-distinct-operation)
 # Artciles
 - [From javarevisited: What's the difference between map() and flatMap() methods in Java 8?](https://javarevisited.blogspot.com/2016/03/difference-between-map-and-flatmap-in-java8.html)
