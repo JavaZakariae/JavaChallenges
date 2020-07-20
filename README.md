@@ -9,3 +9,4 @@ The src folder contains the java challenges found on the following [youtube chan
 
 # Artciles
 - [From javarevisited: What's the difference between map() and flatMap() methods in Java 8?](https://javarevisited.blogspot.com/2016/03/difference-between-map-and-flatmap-in-java8.html)
+- [Use Stream API simpler or don’t use it at all](https://medium.com/@tagir_valeev/use-stream-api-simpler-or-dont-use-it-at-all-ea0a44a4b1ff)
