@@ -2,6 +2,8 @@ package others.youtube;
 
 
 import java.util.*;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 /**
  * Life Beyond Java 8, by Trisha Gee / JetBrains Technology Day for Java (2020)
@@ -11,7 +13,24 @@ public class BeyondJava8 {
 
     public static void main( String[] args ) {
         //unmodifiableList();
-        unmodifiableMap();
+        //unmodifiableMap();
+        //collectToUnmodifiableList();
+        predicateNot();
+
+    }
+
+    private static void predicateNot() {
+        List.of(1,2,3,4,5).stream()
+                .filter(Predicate.not(x->x>3)) //also using not(x->x>3)
+                .forEach(System.out::println);
+    }
+
+    //collecting to an  unmodifiable List
+    private static void collectToUnmodifiableList() {
+        List<String> modifiableList = new ArrayList();
+        modifiableList.add("A");modifiableList.add("B");modifiableList.add("C");
+        List<String> unmodifiableList = modifiableList.stream()
+                .collect(Collectors.toUnmodifiableList());
     }
 
     //creating an unmodifiableMap
