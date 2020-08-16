@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 /**
  * Life Beyond Java 8, by Trisha Gee / JetBrains Technology Day for Java (2020)
  * https://www.youtube.com/watch?v=gKestt55Q4M
- * @todo java 13 and above
+ * @todo java 15 and above
  */
 public class BeyondJava8 {
 
@@ -19,8 +19,17 @@ public class BeyondJava8 {
         //predicateNot();
         //newSwitchStatement(new Random().nextInt());
         //textBlocks();
-        Person p1 = new Employee("zaki");
-        instanceOfInJava14(p1);
+        /*Person p1 = new Employee("zaki");
+        instanceOfInJava14(p1);*/
+        usingRecordInJava14();
+    }
+
+    private static void usingRecordInJava14() {
+        User user = new User(1, "Trisha");
+        //with record we get overridden methods out of the box...
+        System.out.println("user.id() = " + user.id());
+        System.out.println("user.name() = " + user.name());
+        System.out.println("user.toString() = " + user.toString());
     }
 
     private static void instanceOfInJava14(Person person) {
@@ -93,7 +102,7 @@ public class BeyondJava8 {
     }
 }
 
-
+//for pattern matching
 class Person{
     String name;
 
@@ -108,7 +117,6 @@ class Person{
                 '}';
     }
 }
-
 class Employee extends Person{
     public Employee(String name) {
         super(name);
@@ -120,3 +128,11 @@ class Employee extends Person{
     }
 
 }
+
+
+record User(int id, String name){
+
+}
+
+
+
