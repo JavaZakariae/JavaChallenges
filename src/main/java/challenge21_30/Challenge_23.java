@@ -33,10 +33,10 @@ public class Challenge_23 {
     private <R extends WeekDay, T > T getUsingSwitchCase(R weekDay) {
         var t = switch((WeekDay)weekDay){
             case MONDAY -> (T) Integer.valueOf(4);
-            case TUESDAY, WEDNESDAY, THURSDAY -> {
-                System.out.println("Every day is beer day for homer");
-                break  (Integer.valueOf(129) == 129 ? 5 : 7);
-            }
+//            case TUESDAY, WEDNESDAY, THURSDAY -> {
+//                System.out.println("Every day is beer day for homer");
+//                break  (Integer.valueOf(129) == 129 ? 5 : 7);
+//            }
             case FRIDAY -> (T) Double.valueOf(4);
             case SATURDAY, SUNDAY -> (T) (Object) "6" == new String("6") ? 2 : 4;
             default -> new IllegalStateException("Non existent day.");
