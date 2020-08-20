@@ -11,3 +11,5 @@ The src folder contains the java challenges found on the following [youtube chan
 - [From javarevisited: What's the difference between map() and flatMap() methods in Java 8?](https://javarevisited.blogspot.com/2016/03/difference-between-map-and-flatmap-in-java8.html)
 - [Use Stream API simpler or don’t use it at all](https://medium.com/@tagir_valeev/use-stream-api-simpler-or-dont-use-it-at-all-ea0a44a4b1ff)
 - [Map.merge() - One method to rule them all](https://www.nurkiewicz.com/2019/03/mapmerge-one-method-to-rule-them-all.html)
+- [Java Stream collectors](https://medium.com/@liakh.aliaksandr/predefined-java-stream-collectors-cee514c3ad63).
+- [Sealed Types in Java](https://medium.com/@yassinhajaj/sealed-types-in-java-2c13d6e8d61).
